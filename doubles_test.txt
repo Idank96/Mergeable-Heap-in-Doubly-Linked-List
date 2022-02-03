@@ -1,0 +1,41 @@
+MakeHeap
+
+Insert 1
+
+Insert 1
+
+Insert 17
+
+Insert 17
+
+Insert 4
+
+Insert 4
+
+Insert 1
+
+Insert 17 
+
+ExtractMin
+
+MakeHeap
+
+Insert 1
+
+Insert 1
+
+Insert 17
+
+Insert 17
+
+Insert 4
+
+Insert 4
+
+Insert 1
+
+Insert 17 
+
+ExtractMin
+
+Union

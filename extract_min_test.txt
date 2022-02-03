@@ -1,0 +1,29 @@
+MakeHeap
+
+Insert 7
+
+Insert 16
+
+Insert 3
+
+Insert 27
+
+Insert 75
+
+Insert 94
+
+ExtractMin
+
+ExtractMin
+
+ExtractMin
+
+ExtractMin
+
+ExtractMin
+
+ExtractMin
+
+ExtractMin
+
+Minimum

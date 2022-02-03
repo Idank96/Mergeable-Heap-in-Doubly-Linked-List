@@ -1,0 +1,39 @@
+MakeHeap
+
+Insert 2
+
+Insert 5
+
+Insert 4
+
+Insert 2
+
+ExtractMin
+
+MakeHeap
+
+Insert 5
+
+Insert 10
+
+ExtractMin
+
+Union
+
+Insert 100
+
+Insert 20
+
+Minimum
+
+ExtractMin
+
+Insert 20
+
+MakeHeap
+
+Insert 97
+
+Insert 98
+
+Union

@@ -1,0 +1,277 @@
+This code implements a linked list with the following functions:     
+Make-Heap, Insert, Minimum, Extract-Minimum and Union.              
+
+please enter the type of list you want:     
+1 - Sorted list                            
+2 - Unsorted list                          
+3 - Disjoint Unsorted list                 
+2
+please enter the type of input you want:       
+1 - File                          
+2 - Manually                          
+1
+insert filepath: reg_t.txt
+----------------------
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: []
+----------------------
+
+instruction: Insert 2
+
+~~~ HEAP 1 ~~~
+current list: [2]
+head: 2
+tail: 2
+heap_size: 1
+dict: {2: 2}
+
+----------------------
+
+instruction: Insert 5
+
+~~~ HEAP 1 ~~~
+current list: [2, 5]
+head: 2
+tail: 5
+heap_size: 2
+dict: {2: 2, 5: 5}
+
+----------------------
+
+instruction: Insert 4
+
+~~~ HEAP 1 ~~~
+current list: [2, 5, 4]
+head: 2
+tail: 4
+heap_size: 3
+dict: {2: 2, 5: 5, 4: 4}
+
+----------------------
+
+instruction: Insert 2
+
+~~~ HEAP 1 ~~~
+current list: [2, 5, 4]
+head: 2
+tail: 4
+heap_size: 3
+dict: {2: 2, 5: 5, 4: 4}
+
+----------------------
+
+The minimum is: 2
+Extract the minimum 2
+instruction: ExtractMin
+
+~~~ HEAP 1 ~~~
+current list: [5, 4]
+head: 5
+tail: 4
+heap_size: 2
+dict: {5: 5, 4: 4}
+
+----------------------
+
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: [5, 4]
+head: 5
+tail: 4
+heap_size: 2
+dict: {5: 5, 4: 4}
+
+~~~ HEAP 2 ~~~
+current list: []
+----------------------
+
+instruction: Insert 5
+
+~~~ HEAP 1 ~~~
+current list: [5, 4]
+head: 5
+tail: 4
+heap_size: 2
+dict: {5: 5, 4: 4}
+
+~~~ HEAP 2 ~~~
+current list: [5]
+head: 5
+tail: 5
+heap_size: 1
+dict: {5: 5}
+
+----------------------
+
+instruction: Insert 10
+
+~~~ HEAP 1 ~~~
+current list: [5, 4]
+head: 5
+tail: 4
+heap_size: 2
+dict: {5: 5, 4: 4}
+
+~~~ HEAP 2 ~~~
+current list: [5, 10]
+head: 5
+tail: 10
+heap_size: 2
+dict: {5: 5, 10: 10}
+
+----------------------
+
+The minimum is: 5
+Extract the minimum 5
+instruction: ExtractMin
+
+~~~ HEAP 1 ~~~
+current list: [5, 4]
+head: 5
+tail: 4
+heap_size: 2
+dict: {5: 5, 4: 4}
+
+~~~ HEAP 2 ~~~
+current list: [10]
+head: 10
+tail: 10
+heap_size: 1
+dict: {10: 10}
+
+----------------------
+
+instruction: Union
+
+~~~ Mergeable Heap ~~~
+current list: [5, 4, 10]
+head: 5
+tail: 10
+heap_size: 3
+dict: {5: 5, 4: 4, 10: 10}
+
+----------------------
+
+instruction: Insert 100
+
+~~~ Mergeable Heap ~~~
+current list: [5, 4, 10, 100]
+head: 5
+tail: 100
+heap_size: 4
+dict: {5: 5, 4: 4, 10: 10, 100: 100}
+
+----------------------
+
+instruction: Insert 20
+
+~~~ Mergeable Heap ~~~
+current list: [5, 4, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 5
+dict: {5: 5, 4: 4, 10: 10, 100: 100, 20: 20}
+
+----------------------
+
+The minimum is: 4
+instruction: Minimum
+
+~~~ Mergeable Heap ~~~
+current list: [5, 4, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 5
+dict: {5: 5, 4: 4, 10: 10, 100: 100, 20: 20}
+
+----------------------
+
+The minimum is: 4
+Extract the minimum 4
+instruction: ExtractMin
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 4
+dict: {5: 5, 10: 10, 100: 100, 20: 20}
+
+----------------------
+
+instruction: Insert 20
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 4
+dict: {5: 5, 10: 10, 100: 100, 20: 20}
+
+----------------------
+
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 4
+dict: {5: 5, 10: 10, 100: 100, 20: 20}
+
+~~~ HEAP 2 ~~~
+current list: []
+----------------------
+
+instruction: Insert 97
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 4
+dict: {5: 5, 10: 10, 100: 100, 20: 20}
+
+~~~ HEAP 2 ~~~
+current list: [97]
+head: 97
+tail: 97
+heap_size: 1
+dict: {97: 97}
+
+----------------------
+
+instruction: Insert 98
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 100, 20]
+head: 5
+tail: 20
+heap_size: 4
+dict: {5: 5, 10: 10, 100: 100, 20: 20}
+
+~~~ HEAP 2 ~~~
+current list: [97, 98]
+head: 97
+tail: 98
+heap_size: 2
+dict: {97: 97, 98: 98}
+
+----------------------
+
+instruction: Union
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 100, 20, 97, 98]
+head: 5
+tail: 98
+heap_size: 6
+dict: {5: 5, 10: 10, 100: 100, 20: 20, 97: 97, 98: 98}
+
+----------------------
+
+
+Process finished with exit code 0

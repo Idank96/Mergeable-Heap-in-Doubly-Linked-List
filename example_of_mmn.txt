@@ -1,0 +1,15 @@
+MakeHeap
+
+Insert 8 
+
+Insert 9 
+
+ExtractMin
+
+MakeHeap
+
+Insert 3 
+
+Union
+
+ExtractMin

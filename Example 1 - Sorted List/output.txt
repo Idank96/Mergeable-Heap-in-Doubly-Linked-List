@@ -1,0 +1,154 @@
+This code implements a linked list with the following functions:     
+Make-Heap, Insert, Minimum, Extract-Minimum and Union.              
+
+please enter the type of list you want:     
+1 - Sorted list                            
+2 - Unsorted list                          
+3 - Disjoint Unsorted list                 
+1
+please enter the type of input you want:       
+1 - File                          
+2 - Manually                          
+1
+insert filepath: reg_t.txt
+----------------------
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: []
+----------------------
+
+instruction: Insert 2
+
+~~~ HEAP 1 ~~~
+current list: [2]
+----------------------
+
+instruction: Insert 5
+
+~~~ HEAP 1 ~~~
+current list: [2, 5]
+----------------------
+
+instruction: Insert 4
+
+~~~ HEAP 1 ~~~
+current list: [2, 4, 5]
+----------------------
+
+instruction: Insert 2
+
+~~~ HEAP 1 ~~~
+current list: [2, 4, 5]
+----------------------
+
+Extract the minimum 2
+instruction: ExtractMin
+
+~~~ HEAP 1 ~~~
+current list: [4, 5]
+----------------------
+
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: [4, 5]
+~~~ HEAP 2 ~~~
+current list: []
+----------------------
+
+instruction: Insert 5
+
+~~~ HEAP 1 ~~~
+current list: [4, 5]
+~~~ HEAP 2 ~~~
+current list: [5]
+----------------------
+
+instruction: Insert 10
+
+~~~ HEAP 1 ~~~
+current list: [4, 5]
+~~~ HEAP 2 ~~~
+current list: [5, 10]
+----------------------
+
+Extract the minimum 5
+instruction: ExtractMin
+
+~~~ HEAP 1 ~~~
+current list: [4, 5]
+~~~ HEAP 2 ~~~
+current list: [10]
+----------------------
+
+instruction: Union
+
+~~~ Mergeable Heap ~~~
+current list: [4, 5, 10]
+----------------------
+
+instruction: Insert 100
+
+~~~ Mergeable Heap ~~~
+current list: [4, 5, 10, 100]
+----------------------
+
+instruction: Insert 20
+
+~~~ Mergeable Heap ~~~
+current list: [4, 5, 10, 20, 100]
+----------------------
+
+The minimum is: 4
+instruction: Minimum
+
+~~~ Mergeable Heap ~~~
+current list: [4, 5, 10, 20, 100]
+----------------------
+
+Extract the minimum 4
+instruction: ExtractMin
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 20, 100]
+----------------------
+
+instruction: Insert 20
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 20, 100]
+----------------------
+
+instruction: MakeHeap
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 20, 100]
+~~~ HEAP 2 ~~~
+current list: []
+----------------------
+
+instruction: Insert 97
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 20, 100]
+~~~ HEAP 2 ~~~
+current list: [97]
+----------------------
+
+instruction: Insert 98
+
+~~~ HEAP 1 ~~~
+current list: [5, 10, 20, 100]
+~~~ HEAP 2 ~~~
+current list: [97, 98]
+----------------------
+
+instruction: Union
+
+~~~ Mergeable Heap ~~~
+current list: [5, 10, 20, 97, 98, 100]
+----------------------
+
+
+Process finished with exit code 0

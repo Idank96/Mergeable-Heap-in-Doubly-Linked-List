@@ -1,0 +1,17 @@
+MakeHeap
+
+Insert 4
+
+MakeHeap
+
+Insert 3
+
+Union
+
+Insert 2
+
+MakeHeap
+
+Insert 1
+
+ Union

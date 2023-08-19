@@ -1,23 +1,29 @@
 from linked_list import LinkedList, Node
 
 
-# this class represents unsorted list.
-# using insert() of LinkedList class.
-# functions: makeheap, minimum, extract_min and union.
 class UnsortedList(LinkedList):
+    """
+    This class represents unsorted list.
+    Using insert() of LinkedList class.
+    Functions: makeheap, minimum, extract_min and union.
+    """
     def __init__(self):
         super().__init__()
 
-    # make heap by calling the constructor
-    # time complexity: O(1)
     def make_heap(self):
+        """
+        Make heap by calling the constructor
+        Time complexity: O(1)
+        """
         return UnsortedList()
 
-    # search for the minimum value in the list
-    # prints the minimum and return it.
-    # if list empty, do nothing.
-    # time complexity: O(n)
     def minimum(self):
+        """
+        Search for the minimum value in the list
+        Prints the minimum and return it.
+        If list empty, do nothing.
+        Time complexity: O(n)
+        """
         if self.empty_list():
             return
         current = self.head
@@ -30,11 +36,13 @@ class UnsortedList(LinkedList):
         print(f'The minimum is: {minimum.value}')
         return minimum
 
-    # search for the minimum value in the list
-    # prints the minimum, remove and return it.
-    # if list is empty, do nothing.
-    # time complexity: O(n)
     def extract_min(self):
+        """
+        Search for the minimum value in the list
+        Prints the minimum, remove and return it.
+        If list is empty, do nothing.
+        Time complexity: O(n)
+        """
         if self.empty_list():
             return
 
@@ -58,13 +66,15 @@ class UnsortedList(LinkedList):
         print(f'Extract the minimum')
         return min
 
-    # union 2 unsorted lists.
-    # return the list itself if the 2nd is None.
-    # set head of self as the head of the first list (l1)
-    # set the next node of the tail of list 1 to head of list 2 (l2)
-    # set the tail of self to list 2 tail.
-    #  time complexity: O(1)
     def union(self, l1, l2):
+        """
+        Union 2 unsorted lists.
+        Return the list itself if the 2nd is None.
+        Set head of self as the head of the first list (l1)
+        Set the next node of the tail of list 1 to head of list 2 (l2)
+        Set the tail of self to list 2 tail.
+        Time complexity: O(1)
+        """
         if (not l1 and not l2) or (not l1.head and (not l2 or not l2.head)):
             return
         elif l1.head and (not l2 or not l2.head):

@@ -1,18 +1,21 @@
-
-# this class represents linked list.
-# functions: insert, print_list, empty_list, value in dict.
-
 class LinkedList:
+    """
+        This class represents linked list.
+        Functions: insert, print_list, empty_list, value in dict.
+    """
     def __init__(self, head=None, tail=None):
         self.dict = {}
         self.head = head
         self.tail = tail
         self.heap_size = 0
 
-    # checks if value already in the list in O(1) with dictionary,
-    # else, insert it to end of list.
-    # time complexity: O(1)
+
     def insert(self, value):
+        """
+            Checks if value already in the list in O(1) with dictionary,
+            Else, insert it to end of list.
+            Time complexity: O(1)
+        """
         if self.value_in_dict(self.dict, value):
             return None
 
@@ -32,10 +35,13 @@ class LinkedList:
         self.dict[value] = value
         return tmp
 
-    # prints current list, head, tail, heap_size and dictionary of self (list).
-    # iterating over the list.
-    # time complexity: O(n)
+
     def print_list(self):
+        """
+            Prints current list, head, tail, heap_size and dictionary of self (list).
+            Iterating over the list.
+            Time complexity: O(n)
+        """
         tmp_list = []
         current = self.head
         while current:
@@ -49,23 +55,31 @@ class LinkedList:
             print(f'heap_size: {self.heap_size}')
             print(f'dict: {self.dict}\n')
 
-    # if list empty return true, else false.
+    
     def empty_list(self):
+        """
+        If list empty return true, else false.
+        """
         if not self.head:
             print(f'List is empty')
             return True
         else:
             return False
 
-    # if value in dict return true, else return false.
+    
     @staticmethod
     def value_in_dict(lst, value):
+        """
+        If value in dict return true, else return false.
+        """
         return True if value in lst else False
 
 
-# this class represents a node in a linked list.
-# functions: get_next, set_next, get_prev, set_prev.
 class Node:
+    """
+        This class represents a node in a linked list.
+        Functions: get_next, set_next, get_prev, set_prev.
+    """
     def __init__(self, value=0, next_node=None, prev_node=None):
         self.value = value
         self.next_node = next_node

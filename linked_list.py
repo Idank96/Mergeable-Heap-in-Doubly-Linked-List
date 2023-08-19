@@ -1,7 +1,7 @@
 class LinkedList:
     """
-        This class represents linked list.
-        Functions: insert, print_list, empty_list, value in dict.
+    This class represents linked list.
+    Functions: insert, print_list, empty_list, value in dict.
     """
     def __init__(self, head=None, tail=None):
         self.dict = {}
@@ -12,9 +12,9 @@ class LinkedList:
 
     def insert(self, value):
         """
-            Checks if value already in the list in O(1) with dictionary,
-            Else, insert it to end of list.
-            Time complexity: O(1)
+        Checks if value already in the list in O(1) with dictionary,
+        Else, insert it to end of list.
+        Time complexity: O(1)
         """
         if self.value_in_dict(self.dict, value):
             return None
@@ -38,9 +38,9 @@ class LinkedList:
 
     def print_list(self):
         """
-            Prints current list, head, tail, heap_size and dictionary of self (list).
-            Iterating over the list.
-            Time complexity: O(n)
+        Prints current list, head, tail, heap_size and dictionary of self (list).
+        Iterating over the list.
+        Time complexity: O(n)
         """
         tmp_list = []
         current = self.head
@@ -77,8 +77,8 @@ class LinkedList:
 
 class Node:
     """
-        This class represents a node in a linked list.
-        Functions: get_next, set_next, get_prev, set_prev.
+    This class represents a node in a linked list.
+    Functions: get_next, set_next, get_prev, set_prev.
     """
     def __init__(self, value=0, next_node=None, prev_node=None):
         self.value = value

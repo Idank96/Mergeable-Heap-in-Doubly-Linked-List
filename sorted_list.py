@@ -1,22 +1,29 @@
 from linked_list import LinkedList, Node
 
 
-# this class represents sorted list.
-# functions: makeheap,insert, minimum, extract_min and union.
 class SortedList(LinkedList):
+    """
+    This class represents sorted list.
+    Functions: makeheap,insert, minimum, extract_min and union.
+    """
     def __init__(self):
         super().__init__()
 
-    # make heap by calling the constructor
-    # time complexity: O(1)
+
     @staticmethod
     def make_heap(self):
+        """
+        Make heap by calling the constructor
+        Time complexity: O(1)
+        """
         return SortedList()
 
-    # checks if value already in the list in O(1) with dictionary,
-    # else, insert it to the right position in the list and fix it.
-    # time complexity: O(n)
     def insert(self, value):
+        """
+        Checks if value already in the list in O(1) with dictionary,
+        else, insert it to the right position in the list and fix it.
+        Time complexity: O(n)
+        """
         if super(SortedList, self).value_in_dict(self.dict, value):
             return None
         node = Node(value)
@@ -41,19 +48,23 @@ class SortedList(LinkedList):
         self.heap_size += 1
         self.dict[value] = value
 
-    # prints the minimum and return it.
-    # if list empty, do nothing.
-    # time complexity: O(1)
     def minimum(self):
+        """
+        Prints the minimum and return it.
+        If list empty, do nothing.
+        Time complexity: O(1)
+        """
         if self.empty_list():
             return
         print(f'The minimum is: {self.head.value}')
         return self.head
 
-    # prints the minimum, remove it from list, and dictionary return it.
-    # if list empty, do nothing.
-    # time complexity: O(1)
     def extract_min(self):
+        """
+        # Prints the minimum, remove it from list, and dictionary return it.
+        # If list empty, do nothing.
+        # Time complexity: O(1)
+        """
         if self.empty_list():
             return
         tmp_min = self.head.value
@@ -63,13 +74,15 @@ class SortedList(LinkedList):
         print(f'Extract the minimum {tmp_min}')
         return tmp_min
 
-    # union 2 sorted lists.
-    # return the list itself if the 2nd is None.
-    # starts from the the head of each list, find the minimum between the two,
-    # and get the next node after the minimum between the two.
-    # if any of the lists ends, it's filling the new list with the other one.
-    #  time complexity: O(n+k)
     def union(self, l1, l2):
+        """
+        Union 2 sorted lists.
+        Return the list itself if the 2nd is None.
+        Starts from the the head of each list, find the minimum between the two,
+        And get the next node after the minimum between the two.
+        If any of the lists ends, it's filling the new list with the other one.
+        Time complexity: O(n+k)
+        """
         if (not l1 and not l2) or (not l1.head and (not l2 or not l2.head)):
             return
         elif l1.head and (not l2 or not l2.head):
@@ -95,6 +108,10 @@ class SortedList(LinkedList):
                     l2_current = self.union_insert(l2_current)
 
     def union_insert(self, current):
+        """
+        Insert a node with the given value to the sorted list, 
+        maintaining the sorted order.
+        """
         super(SortedList, self).insert(current.value)   # insert to the end of list
         current = current.get_next()
         return current
